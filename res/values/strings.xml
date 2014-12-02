@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">健身小助手</string>
+    <string name="menu_settings">设置</string>
+    <string name="step_number">步\t数</string>
+    <string name="use_time">用\t时</string>
+    <string name="distance">行 程</string>
+    <string name="calories">热 量</string>
+    <string name="velocity">速 度</string>
+    <string name="zero">0</string>
+    <string name="double_zero">0.0</string>
+    <string name="calories_zero">0.0</string>
+    <string name="velocity_zero">0.0</string>
+    <string name="km">m</string>
+    <string name="calorie">卡路里</string>
+    <string name="kilometer_per_hour">m/s</string>
+    <string name="start">开始</string>
+    <string name="pause">暂停</string>
+    <string name="cancel">清零</string>
+    <string name="daily">今日累积</string>
+    <string name="image_star">image_star</string>
+    <string name="sunday">星期天</string>
+    <string name="monday">星期一</string>
+    <string name="tuesday">星期二</string>
+    <string name="wednesday">星期三</string>
+    <string name="thursday">星期四</string>
+    <string name="friday">星期五</string>
+    <string name="saturday">星期六</string>
+    <string name="month">月\t</string>
+    <string name="day">日</string>
+    <string name="todo">TODO</string>
+    <string name="information">说明</string>
+    <string name="settings_title">设置</string>
+    <string name="sensitivity">灵敏度：</string>
+    <string name="low">低</string>
+    <string name="high">高</string>
+    <string name="sensitivity_info">灵敏度越高,对身体的动作越敏感.请调节灵敏度来适应不同的体形,路面等因素.</string>
+    <string name="step_length">步长:</string>
+    <string name="cm">厘米</string>
+    <string name="setp_length_info_1">为估算行走的距离和速度，请输入步长</string>
+    <string name="setp_length_info_2">(得出的速度和距离较为粗略，仅供参考)</string>
+    <string name="weigth">体重:</string>
+    <string name="kg">公斤</string>
+    <string name="weight_info">为计算消耗的热量(卡路里)，请入体重。</string>
+    <string name="save">保存</string>
+    <string name="cancle">取消</string>
+    <string name="title_activity_start">StartActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>

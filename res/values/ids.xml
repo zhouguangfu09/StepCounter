@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="show_step_row" type="id"/>
+    <item name="show_step" type="id"/>
+    <item name="velocity" type="id"/>
+    <item name="distance" type="id"/>
+    <item name="calories" type="id"/>
+    <item name="btn_row" type="id"/>
+    <item name="start" type="id"/>
+    <item name="stop" type="id"/>
+    <item name="send" type="id"/>
+    <item name="show_daily" type="id"/>
+    <item name="week_day" type="id"/>
+    <item name="date" type="id" />
+    <item name="iv_1" type="id" />
+    <item name="iv_2" type="id" />
+    <item name="iv_3" type="id" />
+    <item name="iv_4" type="id" />
+    <item name="iv_5" type="id" />
+    <item name="iv_6" type="id" />
+    <item name="iv_7" type="id" />
+    <item name="iv_8" type="id" />
+    <item name="iv_9" type="id" />
+    <item name="iv_10" type="id" />
+    <item name="iv_index" type="id" />
+    <item name="timer" type="id" />
+    <item name="sensitivity_value" type="id" />
+    <item name="high" type="id" />
+    <item name="low" type="id" />
+    <item name="step" type="id" />
+    <item name="step_lenth_value" type="id" />
+    <item name="save" type="id" />
+    <item name="sensitivity" type="id" />
+    <item name="step_lenth" type="id" />
+    <item name="weight_value" type="id" />
+    <item name="weight" type="id" />
+
+</resources>

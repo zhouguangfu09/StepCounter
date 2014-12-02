@@ -1,0 +1,365 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_background"
+    tools:context=".StepActivity" >
+
+    <LinearLayout
+        android:id="@id/show_step_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="5dip"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dip"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/shape"
+            android:orientation="horizontal"
+            android:paddingBottom="15dip"
+            android:paddingTop="15dip"
+            android:weightSum="2" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="60dip"
+                android:layout_weight="1" >
+"
+
+                <TextView
+                    android:id="@+id/step_counter"
+                    style="@style/small_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/step_number" />
+
+                <TextView
+                    android:id="@id/show_step"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/step_counter"
+                    android:layout_marginTop="10dip"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/white"
+                    android:textSize="55sp" />
+            </RelativeLayout>
+
+            <com.ant.liao.GifView
+                android:id="@+id/gif_view"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/btn_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="5dip" >
+
+            <Button
+                android:id="@id/start"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg"
+                android:onClick="onClick"
+                android:padding="5dip"
+                android:text="@string/start"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@id/stop"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/btn_bg"
+                android:onClick="onClick"
+                android:padding="5dip"
+                android:text="@string/pause"
+                android:textColor="@android:color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/show_step_row"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:background="@drawable/shape"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingTop="10dip" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/small_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/use_time" />
+
+            <TextView
+                android:id="@id/timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <TableLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:stretchColumns="1" >
+
+            <TableRow
+                android:id="@+id/hide1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:text="@string/distance" />
+
+                <TextView
+                    android:id="@id/distance"
+                    style="@style/small_text_style"
+                    android:gravity="right" />
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:gravity="right"
+                    android:text="@string/km" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:text="@string/calories" />
+
+                <TextView
+                    android:id="@id/calories"
+                    style="@style/small_text_style"
+                    android:gravity="right" />
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:gravity="right"
+                    android:text="@string/calorie" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/hide2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:text="@string/velocity" />
+
+                <TextView
+                    android:id="@id/velocity"
+                    style="@style/small_text_style"
+                    android:gravity="right" />
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:gravity="right"
+                    android:text="@string/kilometer_per_hour" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@id/show_daily"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/show_step_row"
+        android:layout_marginBottom="10dip"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="5dip"
+        android:background="@drawable/shape"
+        android:stretchColumns="5" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="20dip" >
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:text="@string/daily"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@id/week_day"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dip" >
+
+            <ImageView
+                android:id="@id/iv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_margin="2dip"
+                android:background="#00000000"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/star_enable" />
+
+            <ImageView
+                android:id="@id/iv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="2dip"
+                android:background="#00000000"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/star_enable" />
+
+            <ImageView
+                android:id="@id/iv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_margin="2dip"
+                android:background="#00000000"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/star_enable" />
+
+            <ImageView
+                android:id="@id/iv_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_margin="2dip"
+                android:background="#00000000"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/star_enable" />
+
+            <ImageView
+                android:id="@id/iv_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="4"
+                android:layout_margin="2dip"
+                android:background="#00000000"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/star_enable" />
+
+            <TextView
+                android:id="@id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@android:color/white" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="15dip" >
+
+            <ImageView
+                android:id="@id/iv_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_margin="2dip"
+                android:background="#00000000"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/star_enable" />
+
+            <ImageView
+                android:id="@id/iv_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="2dip"
+                android:background="#00000000"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/star_enable" />
+
+            <ImageView
+                android:id="@id/iv_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_margin="2dip"
+                android:background="#00000000"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/star_enable" />
+
+            <ImageView
+                android:id="@id/iv_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_margin="2dip"
+                android:background="#00000000"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/star_enable" />
+
+            <ImageView
+                android:id="@id/iv_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="4"
+                android:layout_margin="2dip"
+                android:background="#00000000"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/star_enable" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

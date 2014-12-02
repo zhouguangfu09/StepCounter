@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ContentDescription">
+        <ignore path="res/layout/activity_main.xml" />
+    </issue>
+    <issue id="NewApi">
+        <ignore path="src/com/cn/stepcounter/SplashActivity.java" />
+        <ignore path="src/com/cn/stepcounter/StepCounterActivity.java" />
+        <ignore path="src/com/jackie/step/StepDetector.java" />
+        <ignore path="src/com/jackie/step/StepService.java" />
+    </issue>
+</lint>

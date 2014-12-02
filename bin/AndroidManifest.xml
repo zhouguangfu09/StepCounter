@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.cn.stepcounter"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- 电源管理权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.cn.stepcounter.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cn.stepcounter.StepCounterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.cn.stepcounter.SettingsActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.cn.stepcounter.StepCounterService" />
+
+        <activity
+            android:name="com.cn.stepcounter.StartActivity"
+            android:label="@string/title_activity_start" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_settings"
+        android:orderInCategory="100"
+        android:title="@string/menu_settings"/>
+    <item
+        android:id="@+id/ment_information"
+        android:orderInCategory="100"
+        android:title="@string/information"
+        android:visible="false"/>
+
+</menu>
