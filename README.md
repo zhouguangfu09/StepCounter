@@ -10,7 +10,7 @@
 1. 程序主界面
 ![程序主界面](https://github.com/zhouguangfu09/StepCounter/blob/master/png/2.png)
 2. 设置界面
-![程序主界面](ttps://github.com/zhouguangfu09/StepCounter/blob/master/png/3.png)
+![程序主界面](https://github.com/zhouguangfu09/StepCounter/blob/master/png/3.png)
 ****
 ###软件原理
 判断人是否处于行走中，主要从以下几个方面判断：
